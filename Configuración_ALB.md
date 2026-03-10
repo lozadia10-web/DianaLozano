@@ -6,26 +6,6 @@ Este laboratorio documenta la implementación de una arquitectura de alta dispon
 
 ---
 
-## 📊 Diagrama de Arquitectura del Flujo
-Este diagrama representa visualmente cómo el tráfico viaja desde el usuario hasta mis servidores finales:
-
-```mermaid
-graph TD
-    User((Usuario en Internet)) -->|Puerto 80| ALB[Application Load Balancer: ALB-sitioWeb-SAS-diana]
-    
-    subgraph Capa de Red y Seguridad
-        ALB -->|Verifica| SG[Security Group: EC2-SG-sitioweb-sas-diana]
-    end
-    
-    subgraph Grupo de Destino
-        ALB -->|Redirige| TG[Target Group: TG-sitioWeb-SAS-diana]
-        TG --> EC2_1[Instancia EC2 A]
-        TG --> EC2_2[Instancia EC2 B]
-    end
-
-    style ALB fill:#f96,stroke:#333,stroke-width:2px
-    style TG fill:#6cf,stroke:#333,stroke-width:2px
-
 ## 🏗️ 1. Preparación de Infraestructura (EC2)
 Para iniciar el laboratorio, aseguré la disponibilidad de las instancias que actuarían como servidores finales. En el panel de control verifiqué que las instancias estuvieran en estado de ejecución y distribuidas en diferentes zonas de disponibilidad para garantizar la redundancia.
 
