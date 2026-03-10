@@ -2,11 +2,6 @@
 
 Este laboratorio documenta el proceso de despliegue de una aplicación web utilizando **AWS Elastic Beanstalk**. El objetivo principal fue implementar una solución de **PaaS (Platform as a Service)** que permitiera el despliegue automatizado de una aplicación en Node.js, gestionando la infraestructura, el balanceo de carga y el escalado de forma transparente.
 
-## 👤 Información del Proyecto
-* **Estudiante:** Diana Lozano
-* **Servicios Utilizados:** AWS Elastic Beanstalk, EC2, IAM, S3, CloudWatch.
-* **Plataforma:** Node.js 24 corriendo sobre 64bit Amazon Linux 2023.
-
 ---
 
 ## 🏗️ 1. Configuración del Entorno y Aplicación
